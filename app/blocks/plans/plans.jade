@@ -1,0 +1,16 @@
+.plans
+  .title-simple Какие у вас планы на будущее
+  .descr-simple Этот ответ ни на что не повлияет. Не беда, если в будущем планы поменяются.
+  .plans__items
+    mixin plans__item(ttl, id, checked)
+      .plans__item
+        input.plans__item-input(name='plans', value= id, id= id type='radio' checked= checked)
+        .plans__item-bullet
+          .plans__item-bullet-out
+          .plans__item-bullet-inner
+        label.plans__item-label(for= id)= ttl
+
+    +plans__item('Верстать', 'verstat')
+    +plans__item('Прокачиваться в JS', 'js', 'checked')
+    +plans__item('Менеджерство', 'management')
+    +plans__item('Другое', 'other')

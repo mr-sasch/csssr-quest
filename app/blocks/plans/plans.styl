@@ -1,0 +1,56 @@
+/* Какие у вас планы на будущее */
+.plans
+  margin-bottom 80px
+
+.plans__items  
+  select-none()
+
+.plans__item
+  display inline-block
+
+.plans__item-bullet
+  position relative
+  width 30px
+  height 30px
+  display inline-block
+  vertical-align middle
+
+.plans__item-label
+  pt-sans-bold()
+  font-size 20px
+  color #000
+  display inline-block
+  vertical-align middle
+  margin-right 20px
+  cursor pointer
+
+.plans__item-bullet-out
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-image url(../../images/radio-round.png)
+  background-size contain
+  background-position center
+  background-repeat no-repeat
+
+.plans__item-bullet-inner
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-image url(../../images/radio-dot.png)
+  background-size contain
+  background-position center
+  background-repeat no-repeat
+  opacity 0
+  transition .15s ease
+
+.plans__item-input
+  display none
+
+.plans__item-input:checked ~ .plans__item-bullet .plans__item-bullet-inner
+  opacity 1
+/* /Какие у вас планы на будущее */

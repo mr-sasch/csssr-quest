@@ -1,0 +1,10 @@
+.fio
+  mixin fio-row(ttl, cntnt)
+    .fio__row
+      .fio__row-ttl= ttl
+      input.fio__input(value= cntnt)  
+  +fio-row('Полное ФИО', '')
+  +fio-row('Год рождения', '1981')
+  +fio-row('Место жительства', 'Беларусь, Минск')
+  +fio-row('Скайп', 'mr.sasch757')
+  +fio-row('Почта', 'alex.m.sky@gmail.com')

@@ -1,0 +1,66 @@
+/* Расскажите о себе чекбокcами */
+.checkboxes
+  margin-bottom 80px
+
+.title-simple
+  font-size 24px
+  color brown1
+  font-family 'PT Sans Bold', sans-serif
+  margin-bottom 10px
+
+.descr-simple
+  font-size 15px
+  font-family 'PT Sans', sans-serif
+  color grey2
+  line-height 22px
+  margin-bottom 30px
+
+.checkboxes__items
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  justify-content space-between
+
+.checkboxes__item
+  margin-bottom 12px
+  select-none()
+
+.checkboxes__item__chbx
+  position relative
+  display inline-block
+  width 20px
+  height 20px
+  background-image url(../../images/checkbox-square.png)
+  background-position center
+  background-repeat no-repeat
+
+.checkboxes__item__chbx:before
+  content ''
+  position absolute
+  width 30px
+  height 33px
+  left 0
+  bottom 0
+  background-image url(../../images/checkbox-bird.png)
+  background-position center
+  background-repeat no-repeat
+  opacity 0
+  transition .15s ease
+
+.checkboxes__item-label
+  pt-sans-bold()
+  cursor pointer
+  font-size 21px
+  color #000
+  padding-left 5px
+
+.checkboxes__item-label-a
+  color #1f5f97
+
+.checkboxes__item-input
+  display none
+
+.checkboxes__item-input:checked ~ .checkboxes__item__chbx:before
+  content ''
+  opacity 1
+/* /Расскажите о себе чекбокcами */
