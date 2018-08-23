@@ -43,4 +43,39 @@
   pt-sans-bold()
   font-size 13px
   margin-top 30px
+
+  /* мобильная версия */
+.js__mobile
+  padding-left 20px
+  .slider__d
+    background-image url('../../images/slider-horiz-mob.png')
+    background-size inherit
+    background-position left
+    flex-direction column
+    padding-left 2px
+  .slider__d-item-ttl
+    min-width inherit
+    max-width inherit
+    padding-left 40px
+    margin-top inherit
+  .slider__d-item-label.slider__d-item-label-first
+    top 0
+    bottom inherit
+  .slider__d-item-label.slider__d-item-label-last
+    right inherit
+    bottom 0
+    top inherit
+  .slider__d-item:nth-child(3)
+  .slider__d-item:nth-child(4)
+    margin 5px 0
+  .slider__d-item:last-child
+    margin-top 5px
+  .slider__d-item-label
+    top 50%
+  .slider__d-pointer
+    bottom inherit
+    left -6.5px
+
+  /* /мобильная версия */
+
 /* /Уровень владения JavaScript */
