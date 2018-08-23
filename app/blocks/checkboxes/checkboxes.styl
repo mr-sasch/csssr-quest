@@ -12,8 +12,9 @@
   font-size 15px
   font-family 'PT Sans', sans-serif
   color grey2
-  line-height 22px
+  line-height 23px
   margin-bottom 30px
+  letter-spacing -0.07px
 
 .checkboxes__items
   display -webkit-flex
@@ -22,7 +23,10 @@
   justify-content space-between
 
 .checkboxes__item
-  margin-bottom 12px
+  display -webkit-flex
+  display -ms-flex
+  display flex
+  margin-bottom 14px
   select-none()
 
 .checkboxes__item__chbx
@@ -33,13 +37,15 @@
   background-image url(../../images/checkbox-square.png)
   background-position center
   background-repeat no-repeat
+  flex-shrink 0
+  cursor pointer
 
 .checkboxes__item__chbx:before
   content ''
   position absolute
   width 30px
   height 33px
-  left 0
+  left -2px
   bottom 0
   background-image url(../../images/checkbox-bird.png)
   background-position center
@@ -52,7 +58,7 @@
   cursor pointer
   font-size 21px
   color #000
-  padding-left 5px
+  padding-left 8px
 
 .checkboxes__item-label-a
   color #1f5f97

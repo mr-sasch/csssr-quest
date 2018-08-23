@@ -6,15 +6,15 @@
       mixin checkboxes__item(name, text, checked)
         .checkboxes__item
           input.checkboxes__item-input(type='checkbox' id= name name= name checked= checked)
-          .checkboxes__item__chbx
+          label.checkboxes__item__chbx(for= name)
           label.checkboxes__item-label(for= name)= text
       +checkboxes__item('bem', 'БЭМ/OOCSS', 'checked')
       +checkboxes__item('pug', 'Pug (Jade)', 'checked')
       +checkboxes__item('styl', 'Stylus/LESS/SASS')
       +checkboxes__item('svg', 'Работаю с SVG')
       +checkboxes__item('semantic', 'Верстаю семантично')
-      +checkboxes__item('Accessibility', 'A11Y')
-      +checkboxes__item('es', 'ES2015/2016')
+      +checkboxes__item('accessibility', 'Accessibility (A11Y)')
+      +checkboxes__item('es', 'ES2015/ES2016')
     .col
       +checkboxes__item('gulp', 'Gulp/GRUNT')
       +checkboxes__item('webpack', 'Webpack')
@@ -29,7 +29,7 @@
       .checkboxes__item
         input.checkboxes__item-input(type='checkbox' id='blog' name='blog')
         .checkboxes__item__chbx
-        label.checkboxes__item-label(for='blog') Читаю блог 
+        label.checkboxes__item-label(for='blog') Читаю 
           a.checkboxes__item-label-a(href='https://blog.csssr.ru/' target='_blank') blog.csssr.ru
       +checkboxes__item('lazy', 'Я ленивый(-ая)')
       +checkboxes__item('english', 'У меня хороший английский')
