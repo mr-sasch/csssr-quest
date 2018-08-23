@@ -33,4 +33,18 @@
   font-family 'Courier New', serif
   font-size 30px
 
+  /* Адаптация */
+@media screen and (max-width 600px)
+  .fio__row
+    flex-direction column
+    margin-bottom 30px
+  .fio__row-ttl
+    margin-bottom 10px
+  .fio__input
+    margin-left 0
+    padding-left 0
+@media screen and (max-width 400px)
+  .fio__input
+    font-size 22px
+  /* /Адаптация */
 /* /Основные данные */

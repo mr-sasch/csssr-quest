@@ -1,11 +1,11 @@
 .plans
   .title-simple Какие у вас планы на будущее
-  .descr-simple Этот ответ ни на что не повлияет. Не беда, если в будущем планы поменяются.
+  .descr-simple.descr-simple_plans Этот ответ ни на что не повлияет. Не беда, если в будущем планы поменяются.
   .plans__items
     mixin plans__item(ttl, id, checked)
       .plans__item
         input.plans__item-input(name='plans', value= id, id= id type='radio' checked= checked)
-        .plans__item-bullet
+        label.plans__item-bullet(for= id)
           .plans__item-bullet-out
           .plans__item-bullet-inner
         label.plans__item-label(for= id)= ttl

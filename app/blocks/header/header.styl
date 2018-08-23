@@ -6,6 +6,7 @@ header
 	display flex
 	justify-content space-between
 	align-items flex-start
+	flex-wrap wrap
 
 .header__top-stamp
 	margin-right -59px
@@ -16,4 +17,18 @@ header
 
 .header__bottom
 	text-align center
+
+	/* Адаптация */
+@media screen and (max-width 930px)
+	.header__top-stamp
+		margin-right 0
+	.header__bottom-title
+		margin-right 0
+@media screen and (max-width 450px)
+	.header__top
+		justify-content space-around
+	.header__top-stamp
+		margin-top 0
+		margin-bottom 10px
+	/* /Адаптация */
 /* /Шапка */
