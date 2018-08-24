@@ -4,4 +4,6 @@ slider.ondragstart = () => {return false;}
 
 slider.onmousedown = (e) => {
   console.log('down');
+
+
 }
