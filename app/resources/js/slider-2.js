@@ -10,7 +10,7 @@ pointShift = pointWidth/2,
 left;
 
 /* Функции */
-/* Двигаем ползунок */
+  /* Двигаем ползунок */
 const thumbMove = (e) => {
   slider.style.position = 'relative';
   thumb.style.position = 'absolute';
@@ -27,21 +27,29 @@ const thumbMove = (e) => {
       thumb.style.left = left + 'px';
     }
   }
-
+    /* Подняли курсор */
   document.onmouseup = (e) => {
-    /* - определяем свои координаты
-      - соотносим с номерам интервала
-      - делаем переход на соответствующую кнопку f(1,2,3,4) */
     intervals();
     choosePoint();
     moveToPoint(myPoint);
     document.onmousemove = null;
     document.onmouseup = null;
   }
+    /* /Подняли курсор */
 }
-/* /Двигаем ползунок */
+  /* /Двигаем ползунок */
 
-/* Интервалы */
+  /* Поднятие курсора */
+const mouseUp = (myPoint) => {
+  intervals();
+  choosePoint();
+  moveToPoint(myPoint);
+  document.onmousemove = null;
+  document.onmouseup = null;
+}
+  /* /Поднятие курсора */
+
+  /* Интервалы */
 let interval = [],
 pointsCoords = [];
 const intervals = () => {
@@ -54,34 +62,32 @@ const intervals = () => {
     interval[i] = pointsCoords[i] + (pointsCoords[i + 1] - pointsCoords[i])/2;
   }
 }
-/* /Интервалы*/
+  /* /Интервалы*/
 
-/* Определяем в каком интервале находимся */
-let myPoint;
+  /* Определяем в каком интервале находимся */
 const choosePoint = () => {
   if (left < interval[0]) {
     myPoint = 0;
   } else if (left > interval[0] && left < interval[1]) {
     myPoint = 1;
   } else if (left > interval[1] && left < interval[2]) {
-    myPoint = 2;
+    return myPoint = 2;
   } else {
     myPoint = 3;
   }
 };
-/* /Определяем в каком интервале находимся */
+  /* /Определяем в каком интервале находимся */
 
-/* Делаем переход к нужному пойнту */
+  /* Делаем переход к нужному пойнту */
 const moveToPoint = (point) => {
   thumb.style.left = pointsCoords[point] - thumbShift + pointShift*2 + 'px';
 }
-/* /Делаем переход к нужному пойнту */
-
-
+  /* /Делаем переход к нужному пойнту */
 /* /Функции */
 
 
-
+/* События */
+  /* Просто кликаем */
 thumb.onmouseup = (e) => {
   let thumbLeft = thumb.getBoundingClientRect().left,
   shift = e.pageX - thumbLeft;
@@ -90,14 +96,24 @@ thumb.onmouseup = (e) => {
   choosePoint();
   moveToPoint();
 }
+  /* Просто кликаем */
 
-/* Двигаем ползунок */
+  /* Двигаем ползунок */
 thumb.ondragstart = () => {return false;}
 thumb.addEventListener('mousedown', thumbMove);
-/* /Двигаем ползунок */
+  /* /Двигаем ползунок */
 
-/* Клик на пойнт */
+  /* Клик на пойнт с ответом */
 let sliderItem = slider.querySelectorAll('.slider__d-item');
+window.onload = () => {
+  sliderItem[3].click();
+}
+  /* /Клик на пойнт с ответом */
+/* /События */
 
 
-/* /Клик на пойнт */
+/* ---- Вертиклаьный ---- */
+
+
+
+/* ---- /Вертиклаьный ---- */

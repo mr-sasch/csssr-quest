@@ -47,34 +47,54 @@
   /* мобильная версия */
 .js__mobile
   padding-left 20px
-  .slider__d
-    background-image url('../../images/slider-horiz-mob.png')
-    background-size inherit
-    background-position left
-    flex-direction column
-    padding-left 2px
-  .slider__d-item-ttl
-    min-width inherit
-    max-width inherit
-    padding-left 40px
-    margin-top inherit
-  .slider__d-item-label.slider__d-item-label-first
-    top 0
-    bottom inherit
-  .slider__d-item-label.slider__d-item-label-last
-    right inherit
-    bottom 0
-    top inherit
-  .slider__d-item:nth-child(3)
-  .slider__d-item:nth-child(4)
-    margin 5px 0
-  .slider__d-item:last-child
-    margin-top 5px
-  .slider__d-item-label
-    top 50%
-  .slider__d-pointer
-    bottom inherit
-    left -6.5px
+
+.slider__m
+  background-image url('../../images/slider-horiz-mob.png')
+  background-size inherit
+  background-position left
+  background-repeat no-repeat
+  flex-direction column
+  padding-left 2px
+  position relative
+
+.slider__m-item-ttl
+  min-width inherit
+  max-width inherit
+  padding-left 40px
+  margin-top inherit
+  font-family 'PT Sans Bold', sans-serif
+  font-size 13px
+
+.slider__m-item-label.slider__m-item-label-first
+  top 0
+  bottom inherit
+
+.slider__m-item-label.slider__m-item-label-last
+  right inherit
+  bottom 0
+  top inherit
+
+.slider__m-item:nth-child(3)
+.slider__m-item:nth-child(4)
+  margin 15px 0
+
+.slider__m-item:last-child
+  margin-top 5px
+
+.slider__m-item
+  position relative
+  cursor pointer
+  select-none()
+
+.slider__m-item-label
+  top 50%
+  position absolute
+
+.slider__m-pointer
+  bottom inherit
+  top -8px
+  left -15px
+  position absolute
 
   /* /мобильная версия */
 
