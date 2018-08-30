@@ -45,7 +45,7 @@ const mouseUp = (e) => {
   /* Массив с координатами */
   var itemCoords = [];
   for (let i = 0; i < items.length; i++) {
-    itemCoords[i] = items[i].getBoundingClientRect().top - sliderMobTop + itemMobHeight/2;
+    itemCoords[i] = items[i].getBoundingClientRect().top - sliderMobTop;
   }
   console.log('itemCoords', itemCoords);
   /* /Массив с координатами */
@@ -56,7 +56,7 @@ const mouseUp = (e) => {
   for (let i = 0; i < items.length; i++) {
     if (i === 0) {
       intervalFrom[i] = -10;
-      intervalTo[i] = (items[1].getBoundingClientRect().top - sliderMobTop - itemMobHeight/2) / 2;
+      intervalTo[i] = itemCoords[i] + (itemCoords[i + 1] - itemCoords[i]) / 2;
     } else if (i === (items.length - 1)) {
       intervalFrom[i] = itemCoords[i] - (itemCoords[i] - itemCoords[i - 1]) / 2;
       intervalTo[i] = itemCoords[i];
@@ -91,7 +91,7 @@ const mouseUp = (e) => {
     console.log('itemsArr', itemsArr[i]);
     console.log('top', top);
     if ((top >= itemsArr[i].intFrom) && (top < itemsArr[i].intTo)) {
-      thumbMob.style.top = itemsArr[i].coords - thumbMobHeight/2 + 'px';
+      thumbMob.style.top = itemsArr[i].coords - thumbMobHeight/2 + 1 + 'px';
       console.log('точка', itemsArr[i].id);
       break;
     }
