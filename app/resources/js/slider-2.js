@@ -107,7 +107,6 @@ thumb.addEventListener('mousedown', thumbMove);
 let sliderItem = slider.querySelectorAll('.slider__d-item');
 window.onload = () => {
   sliderItem[3].click();
-  sliderMob();
 }
   /* /Клик на пойнт с ответом */
 /* /События */
