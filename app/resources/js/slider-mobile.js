@@ -55,7 +55,7 @@ const mouseUp = (e) => {
   intervalTo = [];
   for (let i = 0; i < items.length; i++) {
     if (i === 0) {
-      intervalFrom[i] = 0;
+      intervalFrom[i] = -10;
       intervalTo[i] = (items[1].getBoundingClientRect().top - sliderMobTop - itemMobHeight/2) / 2;
     } else if (i === (items.length - 1)) {
       intervalFrom[i] = itemCoords[i] - (itemCoords[i] - itemCoords[i - 1]) / 2;
