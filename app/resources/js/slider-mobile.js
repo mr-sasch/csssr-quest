@@ -1,5 +1,7 @@
-
 const sliderMobFunc = (e) => {
+  // Объяявляем глобальную переменнную для координат указателя/thumb`а
+  var coords;
+  // И другие глобальные для функции переменные
   var sliderMob = document.querySelector('#slider__m'),
   sliderMobHeight = sliderMob.offsetHeight,
   sliderMobTop = sliderMob.getBoundingClientRect().top,
@@ -7,6 +9,30 @@ const sliderMobFunc = (e) => {
   thumbMobHeight = thumbMob.offsetHeight,
   itemMob = sliderMob.querySelector('.slider__m-item-label'),
   itemMobHeight = itemMob.offsetHeight;
+
+  // Определяем, на чем совершено действие
+
+  // Функция движения ползунка
+  const move = () => {
+
+    // Изменяем значение переменной с координатами
+    coords = ;
+  }
+
+  // Функция клика по пойнту
+  const clickPoint = () => {
+
+    // Изменяем значение переменной с координатами
+    coords = ;
+  }
+
+  // Функция при поднятии кнопки(определение координат, интервалов, передвижение ползунка)
+  const mouseUpMob = () => {
+
+  }
+
+
+
 
   thumbMob.ondragstart = () => {return false;}
 
@@ -18,23 +44,36 @@ const sliderMobFunc = (e) => {
     thumbMobShift = e.pageY - thumbMobTop;
 
     document.onmousemove = (e) => {
-      var top = e.pageY - sliderMobTop - thumbMobShift;
+      var top = e.pageY - sliderMobTop - thumbMobShift,
+      topStyle;
+
 
       if (top < 0 - thumbMobHeight/2) {
-        thumbMob.style.top = 0 - thumbMobHeight/2 + 'px';
+        topStyle = 0 - thumbMobHeight/2;
       } else if (top > sliderMobHeight - thumbMobHeight/2 - itemMobHeight/2) {
-        thumbMob.style.top = sliderMobHeight - thumbMobHeight/2 - itemMobHeight/2 + 'px';
+        topStyle = sliderMobHeight - thumbMobHeight/2 - itemMobHeight/2;
       } else {
-        thumbMob.style.top = top + 'px';
+        topStyle = top;
+      }
+      thumbMob.style.top = topStyle + 'px';
+      // console.log(topStyle);
+      document.onmouseup = (e) => {
+
+        document.onmousemove = null;
+        document.onmouseup = null;
+        console.log(topStyle);
+        return topStyle;
       }
     }
 
-    document.onmouseup = (e) => {
-      mouseUpMob(e);
-
-      document.onmousemove = null;
-      document.onmouseup = null;
-    }
+    // document.onmouseup = (e) => {
+    //
+    //   // mouseUpMob(e);
+    //
+    //   document.onmousemove = null;
+    //   document.onmouseup = null;
+    //   // return topStyle;
+    // }
   }
 
 }
