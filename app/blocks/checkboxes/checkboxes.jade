@@ -10,26 +10,26 @@
           label.checkboxes__item-label(for= name)= text
       +checkboxes__item('bem', 'БЭМ/OOCSS', 'checked')
       +checkboxes__item('pug', 'Pug (Jade)', 'checked')
-      +checkboxes__item('styl', 'Stylus/LESS/SASS')
+      +checkboxes__item('styl', 'Stylus/LESS/SASS', 'checked')
       +checkboxes__item('svg', 'Работаю с SVG')
-      +checkboxes__item('semantic', 'Верстаю семантично')
+      +checkboxes__item('semantic', 'Верстаю семантично', 'checked')
       +checkboxes__item('accessibility', 'Accessibility (A11Y)')
-      +checkboxes__item('es', 'ES2015/ES2016')
+      +checkboxes__item('es', 'ES2015/ES2016', 'checked')
     .col
-      +checkboxes__item('gulp', 'Gulp/GRUNT')
+      +checkboxes__item('gulp', 'Gulp/GRUNT', 'checked')
       +checkboxes__item('webpack', 'Webpack')
       +checkboxes__item('webgl', 'Дружу с WebGL')
-      +checkboxes__item('jquery', 'jQuery')
+      +checkboxes__item('jquery', 'jQuery', 'checked')
       +checkboxes__item('angular', 'Знаю/изучаю Angular')
-      +checkboxes__item('react', 'Знаю/изучаю React')
+      +checkboxes__item('react', 'Знаю/изучаю React', 'checked')
       +checkboxes__item('nodejs', 'Знаю/изучаю Node.js')
     .col
-      +checkboxes__item('git', 'Использую Git')
-      +checkboxes__item('eye', 'С глазомером все ок')
+      +checkboxes__item('git', 'Использую Git', 'checked')
+      +checkboxes__item('eye', 'С глазомером все ок', 'checked')
       .checkboxes__item
-        input.checkboxes__item-input(type='checkbox' id='blog' name='blog')
+        input.checkboxes__item-input(type='checkbox' id='blog' name='blog', 'checked')
         .checkboxes__item__chbx
         label.checkboxes__item-label(for='blog') Читаю 
           a.checkboxes__item-label-a(href='https://blog.csssr.ru/' target='_blank') blog.csssr.ru
-      +checkboxes__item('lazy', 'Я ленивый(-ая)')
-      +checkboxes__item('english', 'У меня хороший английский')
+      +checkboxes__item('lazy', 'Я ленивый(-ая)', 'checked')
+      +checkboxes__item('english', 'У меня хороший английский', 'checked')
