@@ -2,6 +2,8 @@
 app/styles/helpers/svg-size.styl
 app/styles/sprites
 
+node_modules/*
+
 # Numerous always-ignore extensions
 *.bak
 *.diff
